@@ -1,0 +1,2592 @@
+local v1 = "https://raw.githubusercontent.com/deividcomsono/Obsidian/main/"--leak by masa https://discord.gg/Hpva7sJFpZ
+local v2 = loadstring(game:HttpGet(v1 .. "Library.lua"))()
+
+local v3 = {
+  BackgroundColor = "000000",--leak by masa https://discord.gg/Hpva7sJFpZ
+  MainColor = "111111",--leak by masa https://discord.gg/Hpva7sJFpZ
+  AccentColor = "ff9000",
+  OutlineColor = "222222",
+  FontColor = "ffffff",
+}--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+v2.CornerRadius = 8
+v2.Scheme.BackgroundColor = Color3.fromHex(v3.BackgroundColor)
+v2.Scheme.MainColor = Color3.fromHex(v3.MainColor)
+v2.Scheme.AccentColor = Color3.fromHex(v3.AccentColor)--leak by masa https://discord.gg/Hpva7sJFpZ
+v2.Scheme.OutlineColor = Color3.fromHex(v3.OutlineColor)--leak by masa https://discord.gg/Hpva7sJFpZ
+v2.Scheme.FontColor = Color3.fromHex(v3.FontColor)
+
+local window = v2:CreateWindow({
+  Title = '<b><font color="#ffffff">Ebola</font> <font color="#ff9000">V5</font></b>',--leak by masa https://discord.gg/Hpva7sJFpZ
+  Footer = "<b>Ebola V5 | PH Premium Hub | best script ever | Owner is Estrada</b>",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Icon = "biohazard",
+  Font = Enum.Font.Gotham,
+  NotifySide = "Right",
+  ShowCustomCursor = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Center = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  AutoShow = true,
+  Resizable = true,
+  Size = UDim2.fromOffset(980, 920),
+  CornerRadius = 8,--leak by masa https://discord.gg/Hpva7sJFpZ
+  EnableSidebarResize = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  EnableCompacting = true,
+  SidebarCompacted = false,
+  SidebarCompactWidth = 56,
+  MinSidebarWidth = 150,--leak by masa https://discord.gg/Hpva7sJFpZ
+  CompactWidthActivation = 100,--leak by masa https://discord.gg/Hpva7sJFpZ
+  BackgroundImage = "rbxassetid://0",
+  Animations = {
+    ToggleWindow = false,
+    TabSwitch = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+    Groupbox = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+    Dropdown = true,
+    KeyPicker = true,
+  },
+  TabTransitionTime = 0.28,--leak by masa https://discord.gg/Hpva7sJFpZ
+  TabSwipeOffset = 24,--leak by masa https://discord.gg/Hpva7sJFpZ
+  TabSwipeFrom = "auto",
+})
+
+local f1--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+if v2.ScreenGui then
+  function f1(instance)
+    if instance:IsA("TextLabel") or instance:IsA("TextButton") then
+      instance.RichText = true--leak by masa https://discord.gg/Hpva7sJFpZ
+    end--leak by masa https://discord.gg/Hpva7sJFpZ
+  end
+
+  for _, value in ipairs(v2.ScreenGui:GetDescendants()) do
+    f1(value)--leak by masa https://discord.gg/Hpva7sJFpZ
+  end--leak by masa https://discord.gg/Hpva7sJFpZ
+
+  v2.ScreenGui.DescendantAdded:Connect(function(descendant) f1(descendant) end)
+end
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local function f2(p1, p2, p3)--leak by masa https://discord.gg/Hpva7sJFpZ
+  v2:Notify({
+    Title = '<b><font color="#ff9000">Ebola V5 PH</font></b> - ' .. (p1 or "ALERT"),
+    Description = p2 or "PH Edition | best script ever | Owner is Estrada",
+    Time = p3 or 2.5,--leak by masa https://discord.gg/Hpva7sJFpZ
+  })--leak by masa https://discord.gg/Hpva7sJFpZ
+end
+
+local v4 = { "[OP]", "[MULTI]", "[PH Hub]" }
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local v5 = {--leak by masa https://discord.gg/Hpva7sJFpZ
+  "[OP]", "[MULTI]", "[FAST]", "[Strong]", "[LOCK]", "[Experimental]", "[best script ever]",
+  "[Ebola HvH]",
+}
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local list = {--leak by masa https://discord.gg/Hpva7sJFpZ
+  "[OP]", "[MULTI]", "[FAST]", "[Strong]", "[LOCK]", "[Experimental]", "[best script ever]",
+  "[PH Premium]", "[Bypass]", "[VIP]", "[Godmode]", "[Hub]", "[XXX]", "[1080p]", "[60FPS]",
+  "[Hub_exclusive]", "[No_Lag]", "[Ultra]", "[Max]", "[Extreme]", "[PH_Bypass]", "[Ebola HvH]",
+}--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local function f3(p4, p5, p6, list2, p7)
+  for _, value2 in ipairs(list2) do
+    local v6 = p5 .. " " .. value2
+--leak by masa https://discord.gg/Hpva7sJFpZ
+    p4:AddToggle(p6 .. "_" .. value2:gsub("[%[%]%s+]", "_"), {--leak by masa https://discord.gg/Hpva7sJFpZ
+      Text = v6,
+      Default = false,
+      Tooltip = (p7 or v6) .. " - best script ever | owner is estrada",
+      Callback = function(value3)--leak by masa https://discord.gg/Hpva7sJFpZ
+        if value3 then--leak by masa https://discord.gg/Hpva7sJFpZ
+          f2(v6, "active | best script ever | owner is estrada")
+        end
+      end,
+    })--leak by masa https://discord.gg/Hpva7sJFpZ
+  end--leak by masa https://discord.gg/Hpva7sJFpZ
+end
+
+local addTab = window:AddTab("<b>Home</b>", "house", "Welcome to Ebola V5")
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local addTab2 = window:AddTab(--leak by masa https://discord.gg/Hpva7sJFpZ
+  "<b>Combat</b>", "crosshair", "Non blobman kicks, ownership and sex kick"
+)
+
+local addTab3 = window:AddTab(--leak by masa https://discord.gg/Hpva7sJFpZ
+  "<b>Defence</b>", "shield-alert", "Anti grab, struggle spam and break pcld"--leak by masa https://discord.gg/Hpva7sJFpZ
+)
+
+local addTab4 = window:AddTab("<b>Gucci</b>", "crown", "Remove gucci kick and seat hijacks")
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local addTab5 = window:AddTab(--leak by masa https://discord.gg/Hpva7sJFpZ
+  "<b>Snowball</b>", "snowflake", "Anti snowball and by snowball crash"
+)
+
+local addTab6 = window:AddTab("<b>Blobman</b>", "bot", "Blobman swallow, chew and orbit flings")--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local addTab7 = window:AddTab(
+  "<b>Vehicles</b>", "truck", "Tractor ram, train fling and car physics"
+)
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local addTab8 = window:AddTab(--leak by masa https://discord.gg/Hpva7sJFpZ
+  "<b>Barrier</b>", "shield", "House barrier break and safehouse bypass"
+)
+
+local addTab9 = window:AddTab(--leak by masa https://discord.gg/Hpva7sJFpZ
+  "<b>Desync</b>", "wind", "Spin desync, fake lag and cframe offset"--leak by masa https://discord.gg/Hpva7sJFpZ
+)
+
+local addTab10 = window:AddTab(
+  "<b>Poses</b>", "person-standing", "Penis pose, beam grab and pelvic tilt"--leak by masa https://discord.gg/Hpva7sJFpZ
+)--leak by masa https://discord.gg/Hpva7sJFpZ
+
+local addTab11 = window:AddTab(
+  "<b>Supergrab</b>", "hand", "Supergrab aura, reach and drag velocity"
+)--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local addTab12 = window:AddTab(
+  "<b>Welds</b>", "paperclip", "Weld fling, attach and motor6d glitch"
+)
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local addTab13 = window:AddTab(--leak by masa https://discord.gg/Hpva7sJFpZ
+  "<b>Ragdoll</b>", "user-x", "Super ragdoll, unragdoll and limp bypass"
+)
+
+local addTab14 = window:AddTab(--leak by masa https://discord.gg/Hpva7sJFpZ
+  "<b>Void</b>", "arrow-down", "Void pit pull, black hole and anti-void"--leak by masa https://discord.gg/Hpva7sJFpZ
+)
+
+local addTab15 = window:AddTab(
+  "<b>Cannons</b>", "target", "Cannon auto-fire, barrel lock and launch"--leak by masa https://discord.gg/Hpva7sJFpZ
+)--leak by masa https://discord.gg/Hpva7sJFpZ
+
+local v7 = {
+  Home = addTab,
+  Combat = addTab2,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Defence = addTab3,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Gucci = addTab4,
+  Snowball = addTab5,
+  Blobman = addTab6,
+  Vehicles = addTab7,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Barrier = addTab8,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Desync = addTab9,
+  Poses = addTab10,
+  Supergrab = addTab11,
+  Welds = addTab12,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Ragdoll = addTab13,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Void = addTab14,
+  Cannons = addTab15,
+  Seats = window:AddTab("<b>Seats</b>", "armchair", "Seat trap, auto dismount and bench yeet"),
+  Network = window:AddTab(--leak by masa https://discord.gg/Hpva7sJFpZ
+    "<b>Network</b>", "wifi", "Packet choke, ping spiker and netowner steal"--leak by masa https://discord.gg/Hpva7sJFpZ
+  ),
+  Visuals = window:AddTab("<b>Visuals</b>", "eye", "Hitbox expander, tracer line and void esp"),
+  Hitbox = window:AddTab("<b>Hitbox</b>", "box", "Reach expand, torso expand and arm stretch"),
+  Physics = window:AddTab(--leak by masa https://discord.gg/Hpva7sJFpZ
+    "<b>Physics</b>", "activity", "Zero gravity, infinite bounce and slide"--leak by masa https://discord.gg/Hpva7sJFpZ
+  ),
+  Troll = window:AddTab("<b>Troll</b>", "flame", "Ahmad fuck, fake crash and skid roaster"),
+  Leaks = window:AddTab("<b>Leaks</b>", "file-code", "Stolen xocu leak pastes and confessions"),
+  Estrada = window:AddTab("<b>Estrada</b>", "zap", "Estrada private godmode and supreme power"),--leak by masa https://discord.gg/Hpva7sJFpZ
+  Settings = window:AddTab("<b>Settings</b>", "cog", "Panic button, themes and fake configs"),--leak by masa https://discord.gg/Hpva7sJFpZ
+}
+
+local values = {
+  "HumanoidRootPart", "Head", "Torso", "Left Arm", "Right Arm", "Left Leg", "Right Leg",--leak by masa https://discord.gg/Hpva7sJFpZ
+}--leak by masa https://discord.gg/Hpva7sJFpZ
+
+local values2 = {
+  "NetOwner Hook v1", "PCLD Nullifier", "TouchInterest Flood", "SimulationRadius Max",
+  "xocu Decompiled Hook",--leak by masa https://discord.gg/Hpva7sJFpZ
+}--leak by masa https://discord.gg/Hpva7sJFpZ
+
+local function makeTextLabel(instance2, p8, text)
+  task.spawn(function()
+    local placeholderText = Instance.new("TextLabel")--leak by masa https://discord.gg/Hpva7sJFpZ
+    placeholderText.Name = "PlaceholderText"--leak by masa https://discord.gg/Hpva7sJFpZ
+    placeholderText.Size = UDim2.fromScale(1, 1)
+    placeholderText.BackgroundTransparency = 1
+    placeholderText.Font = Enum.Font.GothamBold
+    placeholderText.RichText = true--leak by masa https://discord.gg/Hpva7sJFpZ
+    placeholderText.TextSize = 13--leak by masa https://discord.gg/Hpva7sJFpZ
+    placeholderText.TextColor3 = Color3.fromRGB(150, 150, 160)
+
+    placeholderText.Text = "<b>" .. (text.title or "VIDEO")
+      .. ' (30 FPS)</b><br/><font size="11" color="#ff9000">Catbox Sprite Sheet Bekleniyor</font>'--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+    placeholderText.Parent = instance2
+
+    local function f4(url, p9)
+      if not url or url == "" then--leak by masa https://discord.gg/Hpva7sJFpZ
+        return nil--leak by masa https://discord.gg/Hpva7sJFpZ
+      end
+
+      if not (writefile and getcustomasset) then
+        return url--leak by masa https://discord.gg/Hpva7sJFpZ
+      end--leak by masa https://discord.gg/Hpva7sJFpZ
+
+      if isfile and isfile(p9) then
+        local ok, result = pcall(function() return getcustomasset(p9) end)
+--leak by masa https://discord.gg/Hpva7sJFpZ
+        if ok and result then--leak by masa https://discord.gg/Hpva7sJFpZ
+          return result
+        end
+      end
+--leak by masa https://discord.gg/Hpva7sJFpZ
+      local function f5(url2)--leak by masa https://discord.gg/Hpva7sJFpZ
+        local v8 = syn and syn.request or http and http.request or http_request or request
+
+        if v8 then
+          local ok2, result2 = pcall(function()--leak by masa https://discord.gg/Hpva7sJFpZ
+            return v8({--leak by masa https://discord.gg/Hpva7sJFpZ
+              Url = url2,
+              Method = "GET",
+              Headers = { ["User-Agent"] = "Roblox/WinInet" },
+            })--leak by masa https://discord.gg/Hpva7sJFpZ
+          end)--leak by masa https://discord.gg/Hpva7sJFpZ
+
+          if ok2 and result2 and (result2.StatusCode == 200 or result2.Status == 200)
+            and result2.Body and #result2.Body > 500 then
+            return result2.Body--leak by masa https://discord.gg/Hpva7sJFpZ
+          end--leak by masa https://discord.gg/Hpva7sJFpZ
+        end
+
+        local ok3, result3 = pcall(function() return game:HttpGet(url2) end)
+--leak by masa https://discord.gg/Hpva7sJFpZ
+        if ok3 and result3 and #result3 > 500 then--leak by masa https://discord.gg/Hpva7sJFpZ
+          return result3
+        end
+
+        return nil--leak by masa https://discord.gg/Hpva7sJFpZ
+      end--leak by masa https://discord.gg/Hpva7sJFpZ
+
+      local v9 = f5(url)
+
+      if v9 and #v9 > 500 then--leak by masa https://discord.gg/Hpva7sJFpZ
+        pcall(function() writefile(p9, v9) end)--leak by masa https://discord.gg/Hpva7sJFpZ
+
+        if isfile and isfile(p9) then
+          local ok4, result4 = pcall(function() return getcustomasset(p9) end)
+--leak by masa https://discord.gg/Hpva7sJFpZ
+          if ok4 and result4 then--leak by masa https://discord.gg/Hpva7sJFpZ
+            return result4
+          end
+        end
+      end--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+      return url
+    end
+
+    while instance2 and instance2.Parent do--leak by masa https://discord.gg/Hpva7sJFpZ
+      local sheets = text.sheets and #text.sheets > 0--leak by masa https://discord.gg/Hpva7sJFpZ
+
+      if sheets or text.url and text.url ~= "" then
+        placeholderText.Visible = false
+        local v10 = {}--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+        if sheets then
+          for index, value4 in ipairs(text.sheets) do
+            v10[index] = f4(value4.url, value4.file)
+          end--leak by masa https://discord.gg/Hpva7sJFpZ
+        else--leak by masa https://discord.gg/Hpva7sJFpZ
+          v10[1] = f4(text.url, text.fileName)
+        end
+
+        p8.ScaleType = text.scaleMode or Enum.ScaleType.Crop--leak by masa https://discord.gg/Hpva7sJFpZ
+        p8.ImageRectSize = Vector2.new(text.frameWidth, text.frameHeight)--leak by masa https://discord.gg/Hpva7sJFpZ
+
+        local v11 = 0
+
+        while instance2 and instance2.Parent do--leak by masa https://discord.gg/Hpva7sJFpZ
+          local totalFrames = text.totalFrames or 16--leak by masa https://discord.gg/Hpva7sJFpZ
+          local v12 = 1 / (text.fps or 30)
+          local framesPerSheet = text.framesPerSheet or totalFrames
+          local v13 = v10[math.floor(v11 / framesPerSheet) + 1] or v10[1]
+--leak by masa https://discord.gg/Hpva7sJFpZ
+          if v13 and p8.Image ~= v13 then--leak by masa https://discord.gg/Hpva7sJFpZ
+            p8.Image = v13
+          end
+
+          local v14 = v11 % framesPerSheet--leak by masa https://discord.gg/Hpva7sJFpZ
+          local columns = text.columns--leak by masa https://discord.gg/Hpva7sJFpZ
+          local rounded = math.floor(v14 / (text.columns or 4))
+
+          p8.ImageRectOffset = Vector2.new(
+            v14 % (columns or 4) * text.frameWidth, rounded * text.frameHeight--leak by masa https://discord.gg/Hpva7sJFpZ
+          )--leak by masa https://discord.gg/Hpva7sJFpZ
+
+          v11 = (v11 + 1) % totalFrames
+          task.wait(v12)
+        end--leak by masa https://discord.gg/Hpva7sJFpZ
+      else--leak by masa https://discord.gg/Hpva7sJFpZ
+        placeholderText.Visible = true
+      end
+
+      task.wait(1)--leak by masa https://discord.gg/Hpva7sJFpZ
+    end--leak by masa https://discord.gg/Hpva7sJFpZ
+  end)
+end
+
+local function makeImageLabel(p10, p11, p12, crop)--leak by masa https://discord.gg/Hpva7sJFpZ
+  local frame = Instance.new("Frame")--leak by masa https://discord.gg/Hpva7sJFpZ
+  frame.Name = p11 .. "_VideoCard"
+  frame.BackgroundColor3 = Color3.fromRGB(15, 15, 18)
+  frame.BorderSizePixel = 0
+  frame.Size = UDim2.new(1, 0, 0, p12 or 200)--leak by masa https://discord.gg/Hpva7sJFpZ
+  frame.ClipsDescendants = true--leak by masa https://discord.gg/Hpva7sJFpZ
+  frame.Parent = p10.Container
+
+  local uiCorner = Instance.new("UICorner")
+  uiCorner.CornerRadius = UDim.new(0, 8)--leak by masa https://discord.gg/Hpva7sJFpZ
+  uiCorner.Parent = frame--leak by masa https://discord.gg/Hpva7sJFpZ
+
+  local uiStroke = Instance.new("UIStroke")
+  uiStroke.Color = Color3.fromRGB(40, 40, 48)
+  uiStroke.Thickness = 1--leak by masa https://discord.gg/Hpva7sJFpZ
+  uiStroke.Parent = frame--leak by masa https://discord.gg/Hpva7sJFpZ
+
+  local videoDisplay = Instance.new("ImageLabel")
+  videoDisplay.Name = "VideoDisplay"
+  videoDisplay.BackgroundTransparency = 1--leak by masa https://discord.gg/Hpva7sJFpZ
+  videoDisplay.Size = UDim2.fromScale(1, 1)--leak by masa https://discord.gg/Hpva7sJFpZ
+  videoDisplay.Position = UDim2.fromScale(0.5, 0.5)
+  videoDisplay.AnchorPoint = Vector2.new(0.5, 0.5)
+  videoDisplay.ScaleType = crop or Enum.ScaleType.Crop
+  videoDisplay.Parent = frame--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+  if p10.Resize then
+    pcall(function() p10:Resize() end)
+  end
+--leak by masa https://discord.gg/Hpva7sJFpZ
+  return frame, videoDisplay--leak by masa https://discord.gg/Hpva7sJFpZ
+end
+
+local addLeftGroupbox = v7.Home:AddLeftGroupbox("<b>Greetings</b>", "skull")
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local greetingCard = Instance.new("Frame")--leak by masa https://discord.gg/Hpva7sJFpZ
+greetingCard.Name = "GreetingCard"
+greetingCard.BackgroundColor3 = Color3.fromRGB(15, 15, 18)
+greetingCard.BorderSizePixel = 0
+greetingCard.Size = UDim2.new(1, 0, 0, 105)--leak by masa https://discord.gg/Hpva7sJFpZ
+greetingCard.ClipsDescendants = true--leak by masa https://discord.gg/Hpva7sJFpZ
+greetingCard.Parent = addLeftGroupbox.Container
+
+local uiCorner2 = Instance.new("UICorner")
+uiCorner2.CornerRadius = UDim.new(0, 8)--leak by masa https://discord.gg/Hpva7sJFpZ
+uiCorner2.Parent = greetingCard--leak by masa https://discord.gg/Hpva7sJFpZ
+
+local uiStroke2 = Instance.new("UIStroke")
+uiStroke2.Color = Color3.fromRGB(40, 40, 48)
+uiStroke2.Thickness = 1--leak by masa https://discord.gg/Hpva7sJFpZ
+uiStroke2.Parent = greetingCard--leak by masa https://discord.gg/Hpva7sJFpZ
+
+local uiListLayout = Instance.new("UIListLayout")
+uiListLayout.FillDirection = Enum.FillDirection.Vertical
+uiListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center--leak by masa https://discord.gg/Hpva7sJFpZ
+uiListLayout.VerticalAlignment = Enum.VerticalAlignment.Center--leak by masa https://discord.gg/Hpva7sJFpZ
+uiListLayout.Padding = UDim.new(0, 6)
+uiListLayout.Parent = greetingCard
+
+local function makeTextLabel2(layoutOrder)--leak by masa https://discord.gg/Hpva7sJFpZ
+  local textLabel = Instance.new("TextLabel")--leak by masa https://discord.gg/Hpva7sJFpZ
+  textLabel.Name = "Line" .. layoutOrder
+  textLabel.BackgroundTransparency = 1
+  textLabel.Size = UDim2.new(1, -16, 0, 24)
+  textLabel.Font = Enum.Font.GothamBold--leak by masa https://discord.gg/Hpva7sJFpZ
+  textLabel.TextSize = 13--leak by masa https://discord.gg/Hpva7sJFpZ
+  textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+  textLabel.TextXAlignment = Enum.TextXAlignment.Center
+  textLabel.TextYAlignment = Enum.TextYAlignment.Center
+  textLabel.RichText = true--leak by masa https://discord.gg/Hpva7sJFpZ
+  textLabel.Text = ""--leak by masa https://discord.gg/Hpva7sJFpZ
+  textLabel.LayoutOrder = layoutOrder
+  textLabel.Parent = greetingCard
+
+  return textLabel--leak by masa https://discord.gg/Hpva7sJFpZ
+end--leak by masa https://discord.gg/Hpva7sJFpZ
+
+local label = makeTextLabel2(1)
+local label2 = makeTextLabel2(2)
+local label3 = makeTextLabel2(3)--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+if addLeftGroupbox.Resize then
+  pcall(function() addLeftGroupbox:Resize() end)
+end
+--leak by masa https://discord.gg/Hpva7sJFpZ
+task.spawn(function()--leak by masa https://discord.gg/Hpva7sJFpZ
+  local list3 = {
+    {
+      prefix = '💀 <b><font color="#ffffff">',
+      suffix = "</font></b> 💀",--leak by masa https://discord.gg/Hpva7sJFpZ
+      text = "WELCOME TO EBOLA V5",--leak by masa https://discord.gg/Hpva7sJFpZ
+      label = label,
+    },
+    {
+      prefix = '☠️ <b><font color="#ff9000">',--leak by masa https://discord.gg/Hpva7sJFpZ
+      suffix = "</font></b> ☠️",--leak by masa https://discord.gg/Hpva7sJFpZ
+      text = "SKIDDED SCRIPT",
+      label = label2,
+    },
+    {--leak by masa https://discord.gg/Hpva7sJFpZ
+      prefix = '👑 <b><font color="#ffaa00">',--leak by masa https://discord.gg/Hpva7sJFpZ
+      suffix = "</font></b> 👑",
+      text = "MADE BY KING ESTRADA",
+      label = label3,
+    },--leak by masa https://discord.gg/Hpva7sJFpZ
+  }--leak by masa https://discord.gg/Hpva7sJFpZ
+
+  while greetingCard and greetingCard.Parent do
+    for _, value5 in ipairs(list3) do
+      value5.label.Text = ""--leak by masa https://discord.gg/Hpva7sJFpZ
+    end--leak by masa https://discord.gg/Hpva7sJFpZ
+
+    task.wait(0.3)
+
+    for _, value6 in ipairs(list3) do--leak by masa https://discord.gg/Hpva7sJFpZ
+      local text2 = value6.text--leak by masa https://discord.gg/Hpva7sJFpZ
+
+      for i = 1, #text2 do
+        if not greetingCard or not greetingCard.Parent then
+          return--leak by masa https://discord.gg/Hpva7sJFpZ
+        end--leak by masa https://discord.gg/Hpva7sJFpZ
+
+        local sub = text2:sub(1, i)
+
+        value6.label.Text = value6.prefix .. sub .. '<font color="#ff9000">_</font>'--leak by masa https://discord.gg/Hpva7sJFpZ
+          .. value6.suffix--leak by masa https://discord.gg/Hpva7sJFpZ
+
+        task.wait(0.04)
+      end
+--leak by masa https://discord.gg/Hpva7sJFpZ
+      value6.label.Text = value6.prefix .. text2 .. value6.suffix--leak by masa https://discord.gg/Hpva7sJFpZ
+      task.wait(0.25)
+    end
+
+    for j = 1, 4 do--leak by masa https://discord.gg/Hpva7sJFpZ
+      if not greetingCard or not greetingCard.Parent then--leak by masa https://discord.gg/Hpva7sJFpZ
+        return
+      end
+
+      list3[3].label.Text = list3[3].prefix .. list3[3].text .. '<font color="#ff9000">_</font>'--leak by masa https://discord.gg/Hpva7sJFpZ
+        .. list3[3].suffix--leak by masa https://discord.gg/Hpva7sJFpZ
+
+      task.wait(0.4)
+      list3[3].label.Text = list3[3].prefix .. list3[3].text .. " " .. list3[3].suffix
+      task.wait(0.4)--leak by masa https://discord.gg/Hpva7sJFpZ
+    end--leak by masa https://discord.gg/Hpva7sJFpZ
+
+    for k = #list3, 1, -1 do
+      local v15 = list3[k]
+      local text3 = v15.text--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+      for m = #text3, 0, -2 do
+        if not greetingCard or not greetingCard.Parent then
+          return
+        end--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+        local sub2 = text3:sub(1, m)
+        v15.label.Text = v15.prefix .. sub2 .. '<font color="#ff9000">_</font>' .. v15.suffix
+        task.wait(0.02)
+      end--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+      v15.label.Text = ""
+      task.wait(0.1)
+    end
+--leak by masa https://discord.gg/Hpva7sJFpZ
+    task.wait(0.4)--leak by masa https://discord.gg/Hpva7sJFpZ
+  end
+end)
+
+local frame2, videoDisplay2 = makeImageLabel(--leak by masa https://discord.gg/Hpva7sJFpZ
+  v7.Home:AddLeftGroupbox("<b>BADDIES</b>", "flame"), "Baddies", 230, Enum.ScaleType.Crop--leak by masa https://discord.gg/Hpva7sJFpZ
+)
+
+makeTextLabel(frame2, videoDisplay2, {
+  title = "BADDIES VIDEO",--leak by masa https://discord.gg/Hpva7sJFpZ
+  sheets = {--leak by masa https://discord.gg/Hpva7sJFpZ
+    { url = "https://files.catbox.moe/zg2gtb.png", file = "ST_Baddies_1.png" },
+    { url = "https://files.catbox.moe/9jq434.png", file = "ST_Baddies_2.png" },
+  },
+  fps = 30,--leak by masa https://discord.gg/Hpva7sJFpZ
+  frameWidth = 170,--leak by masa https://discord.gg/Hpva7sJFpZ
+  frameHeight = 256,
+  columns = 6,
+  framesPerSheet = 22,
+  totalFrames = 44,--leak by masa https://discord.gg/Hpva7sJFpZ
+  scaleMode = Enum.ScaleType.Crop,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+local frame3, videoDisplay3 = makeImageLabel(v7.Home:AddLeftGroupbox(
+  "<b>SNOWBALL</b>", "snowflake"--leak by masa https://discord.gg/Hpva7sJFpZ
+), "Snowball", 210, Enum.ScaleType.Crop)--leak by masa https://discord.gg/Hpva7sJFpZ
+
+makeTextLabel(frame3, videoDisplay3, {
+  title = "SNOWBALL VIDEO",
+  sheets = {--leak by masa https://discord.gg/Hpva7sJFpZ
+    { url = "https://files.catbox.moe/dn1zyq.png", file = "ST_Snowball_1.png" },--leak by masa https://discord.gg/Hpva7sJFpZ
+    { url = "https://files.catbox.moe/0lgndk.png", file = "ST_Snowball_2.png" },
+  },
+  fps = 30,
+  frameWidth = 160,--leak by masa https://discord.gg/Hpva7sJFpZ
+  frameHeight = 191,--leak by masa https://discord.gg/Hpva7sJFpZ
+  columns = 6,
+  framesPerSheet = 30,
+  totalFrames = 60,
+  scaleMode = Enum.ScaleType.Crop,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+local frame4, videoDisplay4 = makeImageLabel(v7.Home:AddRightGroupbox(
+  "<b>FEMBOY</b>", "sparkles"
+), "Femboy", 210, Enum.ScaleType.Crop)--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+makeTextLabel(frame4, videoDisplay4, {
+  title = "FEMBOY VIDEO",
+  sheets = {
+    { url = "https://files.catbox.moe/uzw4po.png", file = "ST_Femboy_1.png" },--leak by masa https://discord.gg/Hpva7sJFpZ
+    { url = "https://files.catbox.moe/kcrbb3.png", file = "ST_Femboy_2.png" },--leak by masa https://discord.gg/Hpva7sJFpZ
+  },
+  fps = 30,
+  frameWidth = 170,
+  frameHeight = 170,--leak by masa https://discord.gg/Hpva7sJFpZ
+  columns = 6,--leak by masa https://discord.gg/Hpva7sJFpZ
+  framesPerSheet = 36,
+  totalFrames = 72,
+  scaleMode = Enum.ScaleType.Crop,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local frame5, videoDisplay5 = makeImageLabel(
+  v7.Home:AddRightGroupbox("<b>MILF</b>", "crown"), "Milf", 200, Enum.ScaleType.Crop
+)
+--leak by masa https://discord.gg/Hpva7sJFpZ
+makeTextLabel(frame5, videoDisplay5, {--leak by masa https://discord.gg/Hpva7sJFpZ
+  title = "MILF VIDEO",
+  sheets = {
+    { url = "https://files.catbox.moe/2uxg32.png", file = "ST_Milf_1.png" },
+    { url = "https://files.catbox.moe/d4k9vg.png", file = "ST_Milf_2.png" },--leak by masa https://discord.gg/Hpva7sJFpZ
+  },--leak by masa https://discord.gg/Hpva7sJFpZ
+  fps = 30,
+  frameWidth = 204,
+  frameHeight = 170,
+  columns = 5,--leak by masa https://discord.gg/Hpva7sJFpZ
+  framesPerSheet = 29,--leak by masa https://discord.gg/Hpva7sJFpZ
+  totalFrames = 58,
+  scaleMode = Enum.ScaleType.Crop,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local addLeftGroupbox2 = v7.Combat:AddLeftGroupbox("<b>Non Blobman Kicks</b>", "crosshair")--leak by masa https://discord.gg/Hpva7sJFpZ
+local addRightGroupbox = v7.Combat:AddRightGroupbox("<b>Sex Kick Matrix</b>", "zap")
+
+addLeftGroupbox2:AddLabel("<b>[ NON BLOBMAN KICKS ]</b>")
+addLeftGroupbox2:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox2:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+f3(addLeftGroupbox2, "Ownership Kick", "OwnKick", list)
+
+addLeftGroupbox2:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox2:AddToggle("LoopGrab_Oblivion", {
+  Text = "LoopGrab Oblivion",
+  Default = false,
+  Tooltip = "LoopGrab Oblivion - stolen from xocu leak dump oops (please dont tell xocu)",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value7)--leak by masa https://discord.gg/Hpva7sJFpZ
+    if value7 then
+      f2("LoopGrab Oblivion", "running xocu leaked grab routine | owner is estrada")
+    end
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox2:AddToggle("Loop_Ragdoll_Beta", {
+  Text = "Loop Ragdoll (BETA)",
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "Loop Ragdoll (BETA) - direct paste from xocu private",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value8)
+    if value8 then
+      f2("Loop Ragdoll (BETA)", "loop ragdoll active | wait this is xocu code")
+    end--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addLeftGroupbox2:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox2:AddSlider("OwnershipForce", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "fling power",
+  Default = 100,
+  Min = 0,
+  Max = 100,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Rounding = 0,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value9)
+    f2("fling power", "power set to " .. value9 .. "% | best script ever")
+  end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox2:AddDropdown("OwnershipTargetPart", {
+  Text = "target part",
+  Values = values,
+  Default = 1,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value10) f2("target part", "target locked: " .. tostring(value10)) end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addLeftGroupbox2:AddLabel("kick bind"):AddKeyPicker("CombatKey1", {
+  Default = "RightShift",--leak by masa https://discord.gg/Hpva7sJFpZ
+  SyncToggleState = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Mode = "Toggle",
+  Text = "kick bind",
+  Callback = function() f2("ownership kick", "target kicked! best script ever.") end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox2:AddDivider()
+
+addLeftGroupbox2:AddToggle("Master_Combat1", {
+  Text = "Enable Selected Method",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,
+  Callback = function(value11)
+    f2("master toggle", "ownership switch: " .. tostring(value11) .. " | owner is estrada")
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox:AddLabel("<b>[ SEX KICK VARIANTS ]</b>")
+addRightGroupbox:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addRightGroupbox:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+f3(addRightGroupbox, "Sex Kick", "SexKick", list)
+
+addRightGroupbox:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox:AddToggle("SexKick_XocuPelvic", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Sex Kick [xocu Pelvic Bypass]",
+  Default = false,
+  Risky = true,
+  Tooltip = "totally original code definitely not decompiled from xocu v2 leak",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value12)--leak by masa https://discord.gg/Hpva7sJFpZ
+    if value12 then
+      f2("Leak Alert", "accidentally loaded xocu pelvic offset routine")
+    end
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox:AddSlider("SexKickSpeed", {
+  Text = "sex fling speed",
+  Default = 100,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Min = 0,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Max = 100,
+  Rounding = 0,
+  Callback = function(value13)
+    f2("sex fling speed", "speed set to " .. value13 * 100 .. " studs | best script ever")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addRightGroupbox:AddDropdown("SexKickStyle", {
+  Text = "kick style",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Values = { "Pelvic Thrust", "Frontal Yeet", "Lap Dance Fling", "xocu Stolen Math" },--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = 1,
+  Callback = function(value14)
+    f2("kick style", "style: " .. tostring(value14) .. " | owner is estrada")
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox:AddDivider()
+
+addRightGroupbox:AddToggle("Master_Combat2", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Enable Selected Method",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,
+  Risky = true,
+  Callback = function(value15)
+    f2("master toggle", "sex kick switch: " .. tostring(value15) .. " | owner is estrada")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+local addLeftGroupbox3 = v7.Defence:AddLeftGroupbox(
+  "<b>Anti Everything Core</b>", "shield-alert"--leak by masa https://discord.gg/Hpva7sJFpZ
+)--leak by masa https://discord.gg/Hpva7sJFpZ
+
+local addRightGroupbox2 = v7.Defence:AddRightGroupbox("<b>Chaotic Defence Matrix</b>", "lock")
+
+addLeftGroupbox3:AddLabel("<b>[ ANTI EVERYTHING ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox3:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox3:AddDivider()
+
+addRightGroupbox2:AddLabel("<b>[ CHAOTIC SHIELD ]</b>")
+addRightGroupbox2:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox2:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+local v16 = {
+  "Anti Snowball", "Anti Banana", "Anti Grab", "Anti Gucci", "Anti Kick", "Anti Dick",
+  "Anti Fart", "Anti Yeet", "Anti Slap", "Anti Crash", "Anti Bungee",--leak by masa https://discord.gg/Hpva7sJFpZ
+}--leak by masa https://discord.gg/Hpva7sJFpZ
+
+local v17 = #v16
+
+for index2, value16 in ipairs(list) do--leak by masa https://discord.gg/Hpva7sJFpZ
+  local v18 = v16[index2 % v17 + 1]--leak by masa https://discord.gg/Hpva7sJFpZ
+  local v19 = v16[(index2 + 5) % v17 + 1]
+
+  addLeftGroupbox3:AddToggle("DefChaoticL_" .. index2, {
+    Text = v18 .. " " .. value16,--leak by masa https://discord.gg/Hpva7sJFpZ
+    Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+    Tooltip = v18 .. " " .. value16 .. " - best script ever | owner is estrada",
+    Callback = function(value17)
+      if value17 then
+        f2(v18, "active | best script ever | owner is estrada")--leak by masa https://discord.gg/Hpva7sJFpZ
+      end--leak by masa https://discord.gg/Hpva7sJFpZ
+    end,
+  })
+
+  addRightGroupbox2:AddToggle("DefChaoticR_" .. index2, {--leak by masa https://discord.gg/Hpva7sJFpZ
+    Text = v19 .. " " .. value16,--leak by masa https://discord.gg/Hpva7sJFpZ
+    Default = false,
+    Tooltip = v19 .. " " .. value16 .. " - best script ever | owner is estrada",
+    Callback = function(value18)
+      if value18 then--leak by masa https://discord.gg/Hpva7sJFpZ
+        f2(v19, "active | best script ever | owner is estrada")--leak by masa https://discord.gg/Hpva7sJFpZ
+      end
+    end,
+  })
+end--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox3:AddDivider()
+
+addLeftGroupbox3:AddToggle("AntiGrab_XocuHook", {
+  Text = "Anti Grab [xocu Hook Injection]",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "accidentally forgot to rename this function from xocu_antigrab_hook... owner is estrada though!",
+  Callback = function(value19)
+    if value19 then
+      f2("xocu Hook", "injected xocu antigrab... wait delete this notification")--leak by masa https://discord.gg/Hpva7sJFpZ
+    end--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addLeftGroupbox3:AddSlider("AntiGrabSensitivity", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "grab detection radius",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = 50,
+  Min = 10,
+  Max = 100,
+  Rounding = 0,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value20)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("anti grab", "radius: " .. value20 .. " studs | best script ever")
+  end,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox3:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox3:AddToggle("Master_Def1", {
+  Text = "Enable Selected Method",
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value21)
+    f2("master toggle", "anti-grab switch: " .. tostring(value21) .. " | owner is estrada")
+  end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox2:AddDivider()
+
+addRightGroupbox2:AddToggle("BreakPCLD_XocuSkid", {
+  Text = "Break PCLD [xocu V3 Skid]",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "stolen directly from xocu ftap source leak... owner is still estrada tho",
+  Callback = function(value22)
+    if value22 then
+      f2("Leak Alert", "xocu pcld breaker loaded (shhh dont snitch)")--leak by masa https://discord.gg/Hpva7sJFpZ
+    end--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addRightGroupbox2:AddToggle("AutoStruggleKeyE", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Auto Struggle Spam [Key E]",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = true,
+  Tooltip = "spams E key 1000 times per second to break out of grabs instantly",
+  Callback = function(value23)
+    f2("struggle spam", "auto struggle: " .. tostring(value23) .. " | best script ever")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addRightGroupbox2:AddSlider("PCLDMultiplier", {
+  Text = "collision damper",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = 99,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Min = 0,
+  Max = 100,
+  Rounding = 0,
+  Callback = function(value24) f2("pcld damper", "damping factor: " .. value24 .. "%") end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox2:AddDivider()
+
+addRightGroupbox2:AddToggle("Master_Def2", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Enable Selected Method",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,
+  Risky = true,
+  Callback = function(value25)
+    f2("master toggle", "break pcld switch: " .. tostring(value25))--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+local addLeftGroupbox4 = v7.Gucci:AddLeftGroupbox("<b>Remove Gucci Kick</b>", "crown")
+local addRightGroupbox3 = v7.Gucci:AddRightGroupbox("<b>Anti Gucci Defense</b>", "slash")--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox4:AddLabel("<b>[ REMOVE GUCCI KICK ]</b>")
+addLeftGroupbox4:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addLeftGroupbox4:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+f3(addLeftGroupbox4, "Remove Gucci Kick", "RemGucci", v5)--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox4:AddDivider()
+
+addLeftGroupbox4:AddToggle("Gucci_XocuBypass", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Gucci Kick [xocu NetBypass]",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,
+  Tooltip = "ripped straight from xocu private repo commit #8f12a",
+  Callback = function(value26)
+    if value26 then--leak by masa https://discord.gg/Hpva7sJFpZ
+      f2("Stolen Module", "xocu gucci remover loaded successfully")--leak by masa https://discord.gg/Hpva7sJFpZ
+    end
+  end,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox4:AddSlider("GucciRange", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "gucci nullifier range",
+  Default = 80,
+  Min = 10,
+  Max = 150,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Rounding = 0,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value27)
+    f2("gucci range", "nullifier radius: " .. value27 .. " studs")
+  end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox4:AddDivider()
+
+addLeftGroupbox4:AddToggle("Master_Gucci1", {
+  Text = "Enable Selected Method",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,
+  Callback = function(value28)
+    f2("master toggle", "gucci remove: " .. tostring(value28) .. " | owner is estrada")
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox3:AddLabel("<b>[ ANTI GUCCI COUNTER ]</b>")
+addRightGroupbox3:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addRightGroupbox3:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+f3(addRightGroupbox3, "Anti Gucci", "AntiGucci", v5)
+
+addRightGroupbox3:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox3:AddToggle("GucciSeatHijack", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Gucci Seat Hijack Interceptor",
+  Default = false,
+  Tooltip = "prevents gucci exploiters from kicking you when sitting",
+  Callback = function(value29)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("gucci hijack", "interceptor: " .. tostring(value29) .. " | best script ever")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addRightGroupbox3:AddDropdown("GucciResponse", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "counter action",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Values = { "Reflect Kick", "Void Attacker", "Freeze NetOwner", "Crash xocu Style" },
+  Default = 1,
+  Callback = function(value30) f2("gucci counter", "counter mode: " .. tostring(value30)) end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox3:AddDivider()
+
+addRightGroupbox3:AddToggle("Master_Gucci2", {
+  Text = "Enable Selected Method",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,
+  Callback = function(value31)
+    f2("master toggle", "anti-gucci switch: " .. tostring(value31))
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+local addLeftGroupbox5 = v7.Snowball:AddLeftGroupbox("<b>Anti Snowball</b>", "snowflake")
+local addRightGroupbox4 = v7.Snowball:AddRightGroupbox("<b>By Snowball Crash</b>", "bomb")
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox5:AddLabel("<b>[ ANTI SNOWBALL ENGINE ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox5:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addLeftGroupbox5:AddDivider()
+
+f3(addLeftGroupbox5, "Anti Snowball", "AntiSnow", list)--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox5:AddDivider()
+
+addLeftGroupbox5:AddToggle("Snowball_XocuShield", {
+  Text = "Snowball Shield [xocu Leaked Math]",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "skidded formula from xocu leaked dump 2024",
+  Callback = function(value32)
+    if value32 then
+      f2("Leak Alert", "xocu snowball deflector engaged")--leak by masa https://discord.gg/Hpva7sJFpZ
+    end--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addLeftGroupbox5:AddSlider("DeflectionAngle", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "bounce velocity",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = 100,
+  Min = 0,
+  Max = 200,
+  Rounding = 0,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value33) f2("snowball bounce", "bounce power: " .. value33 .. "%") end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addLeftGroupbox5:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox5:AddToggle("Master_Snow1", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Enable Selected Method",
+  Default = false,
+  Risky = true,
+  Callback = function(value34)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("master toggle", "anti-snowball: " .. tostring(value34) .. " | owner is estrada")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addRightGroupbox4:AddLabel("<b>[ BY SNOWBALL CRASH ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox4:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox4:AddDivider()
+
+f3(addRightGroupbox4, "By Snowball Crash", "BySnowCrash", list)
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox4:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox4:AddToggle("SnowballSpamPacket", {
+  Text = "Infinite Snowball Packet Spoofer",
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "spams snowball touch interests to crash target client",
+  Callback = function(value35)
+    f2("snowball crash", "spoofer status: " .. tostring(value35) .. " | best script ever")
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox4:AddDropdown("SnowballType", {
+  Text = "snowball payload",
+  Values = { "Standard Frost", "Yellow Snow (Toxic)", "Explosive Glitch", "xocu Lagball" },--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = 1,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value36) f2("snowball payload", "selected: " .. tostring(value36)) end,
+})
+
+addRightGroupbox4:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox4:AddToggle("Master_Snow2", {
+  Text = "Enable Selected Method",
+  Default = false,
+  Risky = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value37)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("master toggle", "snowball crash switch: " .. tostring(value37))
+  end,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local addLeftGroupbox6 = v7.Blobman:AddLeftGroupbox("<b>Blobman Cattle</b>", "bot")--leak by masa https://discord.gg/Hpva7sJFpZ
+local addRightGroupbox5 = v7.Blobman:AddRightGroupbox("<b>Blobman Dairy Form</b>", "rotate-cw")
+
+addLeftGroupbox6:AddLabel("<b>[ BLOBMAN COW MATRIX ]</b>")
+addLeftGroupbox6:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox6:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox5:AddLabel("<b>[ MILK & UDDER PHYSICS ]</b>")
+addRightGroupbox5:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addRightGroupbox5:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local v20 = {
+  "cow blobman", "milk blobman", "cow blobman skin", "blobman udder", "blobman moo sound",
+  "cow blobman swallow", "milking station glitch", "blobman beef mode",
+}--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local v21 = #v20
+
+for index3, value38 in ipairs(list) do
+  local v22 = v20[index3 % v21 + 1]--leak by masa https://discord.gg/Hpva7sJFpZ
+  local v23 = v20[(index3 + 3) % v21 + 1]--leak by masa https://discord.gg/Hpva7sJFpZ
+
+  addLeftGroupbox6:AddToggle("BlobChaoticL_" .. index3, {
+    Text = v22 .. " " .. value38,
+    Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+    Tooltip = v22 .. " " .. value38 .. " - best script ever | owner is estrada",--leak by masa https://discord.gg/Hpva7sJFpZ
+    Callback = function(value39)
+      if value39 then
+        f2(v22, "active | best script ever | owner is estrada")
+      end--leak by masa https://discord.gg/Hpva7sJFpZ
+    end,--leak by masa https://discord.gg/Hpva7sJFpZ
+  })
+
+  addRightGroupbox5:AddToggle("BlobChaoticR_" .. index3, {
+    Text = v23 .. " " .. value38,--leak by masa https://discord.gg/Hpva7sJFpZ
+    Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+    Tooltip = v23 .. " " .. value38 .. " - best script ever | owner is estrada",
+    Callback = function(value40)
+      if value40 then
+        f2(v23, "active | best script ever | owner is estrada")--leak by masa https://discord.gg/Hpva7sJFpZ
+      end--leak by masa https://discord.gg/Hpva7sJFpZ
+    end,
+  })
+end
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox6:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox6:AddToggle("Master_Blob1", {
+  Text = "Enable Selected Method",
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value41)
+    f2("master toggle", "cow blobman switch: " .. tostring(value41) .. " | owner is estrada")
+  end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox5:AddDivider()
+
+addRightGroupbox5:AddToggle("Master_Blob2", {
+  Text = "Enable Selected Method",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,
+  Callback = function(value42)
+    f2("master toggle", "milk blobman switch: " .. tostring(value42) .. " | owner is estrada")
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+local addLeftGroupbox7 = v7.Vehicles:AddLeftGroupbox("<b>Tractor Ram Exploit</b>", "truck")
+local addRightGroupbox6 = v7.Vehicles:AddRightGroupbox("<b>Train & Car Physics</b>", "activity")
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox7:AddLabel("<b>[ TRACTOR RAM EXPLOIT ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox7:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addLeftGroupbox7:AddDivider()
+
+f3(addLeftGroupbox7, "Tractor Ram", "TracRam", v5)--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox7:AddDivider()
+
+addLeftGroupbox7:AddToggle("Tractor_XocuTorque", {
+  Text = "Tractor Torque [xocu Leaked Math]",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "100% paste from xocu vehicle bypass pastebin",
+  Callback = function(value43)
+    if value43 then
+      f2("Leak Alert", "xocu torque multiplier loaded")--leak by masa https://discord.gg/Hpva7sJFpZ
+    end--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addLeftGroupbox7:AddSlider("TractorSpeed", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "tractor ram force",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = 100,
+  Min = 0,
+  Max = 500,
+  Rounding = 0,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value44)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("tractor force", "ram velocity: " .. value44 .. " studs/sec")
+  end,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox7:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox7:AddToggle("Master_Veh1", {
+  Text = "Enable Selected Method",
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value45)
+    f2("master toggle", "tractor ram: " .. tostring(value45) .. " | owner is estrada")
+  end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox6:AddLabel("<b>[ TRAIN & CAR PHYSICS ]</b>")
+addRightGroupbox6:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addRightGroupbox6:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+f3(addRightGroupbox6, "Train Fling", "TrainFling", v5)--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox6:AddDivider()
+
+addRightGroupbox6:AddToggle("CarPhysicsDesync", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Golf Cart / Car Velocity Desync",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,
+  Tooltip = "makes any vehicle inside FTAP fling anyone who touches the bumper",
+  Callback = function(value46)
+    f2("vehicle desync", "bumper death aura: " .. tostring(value46) .. " | best script ever")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addRightGroupbox6:AddDropdown("VehicleTarget", {
+  Text = "vehicle selection",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Values = { "Train Engine", "Tractor", "Golf Cart", "Airplane Prop", "Police Cruiser" },--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = 1,
+  Callback = function(value47) f2("vehicle target", "active vehicle: " .. tostring(value47)) end,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox6:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox6:AddToggle("Master_Veh2", {
+  Text = "Enable Selected Method",
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value48)
+    f2("master toggle", "train fling switch: " .. tostring(value48))
+  end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local addLeftGroupbox8 = v7.Barrier:AddLeftGroupbox("<b>House Barrier Break</b>", "shield")
+local addRightGroupbox7 = v7.Barrier:AddRightGroupbox("<b>Safehouse Bypass</b>", "unlock")
+
+addLeftGroupbox8:AddLabel("<b>[ HOUSE BARRIER BREAK ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox8:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox8:AddDivider()
+
+f3(addLeftGroupbox8, "Barrier Break", "BarBreak", list)
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox8:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox8:AddToggle("Barrier_XocuTunnel", {
+  Text = "Barrier Tunnel [xocu Raycast Paste]",
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "leaked from xocu private repo commit #429c",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value49)
+    if value49 then
+      f2("Leak Alert", "xocu raycast bypass active (dont snitch)")
+    end--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addLeftGroupbox8:AddSlider("BarrierPhaseSpeed", {
+  Text = "phase clipping depth",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = 50,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Min = 1,
+  Max = 100,
+  Rounding = 0,
+  Callback = function(value50)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("phase depth", "depth: " .. value50 .. " studs | best script ever")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addLeftGroupbox8:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox8:AddToggle("Master_Bar1", {
+  Text = "Enable Selected Method",
+  Default = false,
+  Risky = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value51)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("master toggle", "barrier break: " .. tostring(value51) .. " | owner is estrada")
+  end,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox7:AddLabel("<b>[ SAFEHOUSE BYPASS ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox7:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addRightGroupbox7:AddDivider()
+
+f3(addRightGroupbox7, "Safehouse Bypass", "SafeBypass", list)--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox7:AddDivider()
+
+addRightGroupbox7:AddToggle("DoorJammerExploit", {
+  Text = "Safehouse Door Jammer Disabler",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "prevents players from locking you out of the safehouse forever",
+  Callback = function(value52)
+    f2("door jammer", "safehouse doors permanently opened | best script ever")
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox7:AddDropdown("BarrierType", {
+  Text = "barrier target",
+  Values = {--leak by masa https://discord.gg/Hpva7sJFpZ
+    "Red Safehouse Forcefield", "Green Base Barrier", "Blue Spawn Shield", "xocu Ghost Barrier",--leak by masa https://discord.gg/Hpva7sJFpZ
+  },
+  Default = 1,
+  Callback = function(value53) f2("barrier target", "bypassing: " .. tostring(value53)) end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox7:AddDivider()
+
+addRightGroupbox7:AddToggle("Master_Bar2", {
+  Text = "Enable Selected Method",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,
+  Callback = function(value54)
+    f2("master toggle", "safehouse bypass switch: " .. tostring(value54))
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+local addLeftGroupbox9 = v7.Desync:AddLeftGroupbox("<b>Spin Desync Matrix</b>", "wind")
+local addRightGroupbox8 = v7.Desync:AddRightGroupbox("<b>Fake Lag & Ghost Walk</b>", "ghost")
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox9:AddLabel("<b>[ SPIN DESYNC MATRIX ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox9:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addLeftGroupbox9:AddDivider()
+
+f3(addLeftGroupbox9, "Spin Desync", "SpinDesync", v4)--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox9:AddDivider()
+
+addLeftGroupbox9:AddToggle("Desync_XocuCFrame", {
+  Text = "Desync [xocu Unchecked Angle Glitch]",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "straight copy paste from xocu desync v2 leaked gist",
+  Callback = function(value55)
+    if value55 then
+      f2("Leak Alert", "xocu angle desync running | owner is estrada")--leak by masa https://discord.gg/Hpva7sJFpZ
+    end--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addLeftGroupbox9:AddSlider("SpinDesyncSpeed", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "desync yaw speed",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = 1500,
+  Min = 100,
+  Max = 5000,
+  Rounding = 0,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value56) f2("desync speed", "yaw rotation: " .. value56 .. " deg/sec") end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addLeftGroupbox9:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox9:AddToggle("Master_Des1", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Enable Selected Method",
+  Default = false,
+  Risky = true,
+  Callback = function(value57)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("master toggle", "spin desync: " .. tostring(value57) .. " | owner is estrada")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addRightGroupbox8:AddLabel("<b>[ FAKE LAG & GHOST WALK ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox8:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox8:AddDivider()
+
+f3(addRightGroupbox8, "Fake Lag", "FakeLag", v4)
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox8:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox8:AddToggle("GhostWalkPhysics", {
+  Text = "Ghost Walk CFrame Invisibility",
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "makes your character desync from server simulation radius",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value58)
+    f2("ghost walk", "ghost walk: " .. tostring(value58) .. " | best script ever")
+  end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox8:AddSlider("FakeLagFactor", {
+  Text = "packet delay factor",
+  Default = 450,
+  Min = 50,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Max = 1000,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Rounding = 0,
+  Callback = function(value59) f2("fake lag", "choke packets for " .. value59 .. "ms") end,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox8:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox8:AddToggle("Master_Des2", {
+  Text = "Enable Selected Method",
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value60) f2("master toggle", "fake lag switch: " .. tostring(value60)) end,
+})
+
+local addLeftGroupbox10 = v7.Poses:AddLeftGroupbox("<b>Penis Pose Rig</b>", "person-standing")--leak by masa https://discord.gg/Hpva7sJFpZ
+local addRightGroupbox9 = v7.Poses:AddRightGroupbox("<b>Beam Grab & Pelvic Tilt</b>", "zap")--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox10:AddLabel("<b>[ PENIS POSE RIG ]</b>")
+addLeftGroupbox10:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addLeftGroupbox10:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+f3(addLeftGroupbox10, "Penis Pose", "PenisPose", v5)
+
+addLeftGroupbox10:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox10:AddToggle("Pose_XocuPelvic", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Pelvic Rig [xocu Stolen Math]",
+  Default = false,
+  Tooltip = "decompiled from xocu troll scripts pack 2024",
+  Callback = function(value61)--leak by masa https://discord.gg/Hpva7sJFpZ
+    if value61 then--leak by masa https://discord.gg/Hpva7sJFpZ
+      f2("Leak Alert", "accidentally loaded xocu pelvic offset matrix")
+    end
+  end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox10:AddSlider("PenisErectionAngle", {
+  Text = "rig upward pitch",
+  Default = 90,
+  Min = 0,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Max = 180,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Rounding = 0,
+  Callback = function(value62)
+    f2("penis pose", "angle: " .. value62 .. " degrees | best script ever")
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox10:AddDivider()
+
+addLeftGroupbox10:AddToggle("Master_Pose1", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Enable Selected Method",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,
+  Risky = true,
+  Callback = function(value63)
+    f2("master toggle", "penis pose: " .. tostring(value63) .. " | owner is estrada")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addRightGroupbox9:AddLabel("<b>[ BEAM GRAB & PELVIC TILT ]</b>")
+addRightGroupbox9:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox9:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+f3(addRightGroupbox9, "Beam Grab Pose", "BeamPose", v5)
+
+addRightGroupbox9:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox9:AddToggle("PelvicThrustLoop", {
+  Text = "Continuous Pelvic Thrust Spammer",
+  Default = false,
+  Tooltip = "plays aggressive pelvic thrust animation at 60 FPS",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value64)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("thrust spam", "thrust spamming active | best script ever")
+  end,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox9:AddDropdown("PoseStyle", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "pose animation type",
+  Values = { "Aggressive Thrust", "Helicopter Spin", "Zombie Crawl", "xocu Decompiled Rig" },
+  Default = 1,
+  Callback = function(value65) f2("pose style", "style: " .. tostring(value65)) end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox9:AddDivider()
+
+addRightGroupbox9:AddToggle("Master_Pose2", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Enable Selected Method",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,
+  Risky = true,
+  Callback = function(value66)
+    f2("master toggle", "beam grab pose switch: " .. tostring(value66))--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+local addLeftGroupbox11 = v7.Supergrab:AddLeftGroupbox("<b>Supergrab Aura</b>", "grab")
+local addRightGroupbox10 = v7.Supergrab:AddRightGroupbox("<b>Reach & Floor Pin</b>", "magnet")--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox11:AddLabel("<b>[ SUPERGRAB AURA ]</b>")
+addLeftGroupbox11:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addLeftGroupbox11:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+f3(addLeftGroupbox11, "Supergrab Aura", "SGrabAura", list)--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox11:AddDivider()
+
+addLeftGroupbox11:AddToggle("Supergrab_XocuReach", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Supergrab Reach [xocu Leaked Reach]",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,
+  Tooltip = "ripped directly from xocu supergrab leak dump",
+  Callback = function(value67)
+    if value67 then--leak by masa https://discord.gg/Hpva7sJFpZ
+      f2("Leak Alert", "running xocu private reach algorithm (delete this log immediately)")--leak by masa https://discord.gg/Hpva7sJFpZ
+    end
+  end,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox11:AddSlider("SupergrabRadius", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "supergrab pull radius",
+  Default = 75,
+  Min = 10,
+  Max = 200,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Rounding = 0,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value68)
+    f2("supergrab radius", "radius: " .. value68 .. " studs | best script ever")
+  end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox11:AddDivider()
+
+addLeftGroupbox11:AddToggle("Master_SGrab1", {
+  Text = "Enable Selected Method",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,
+  Callback = function(value69)
+    f2("master toggle", "supergrab aura: " .. tostring(value69) .. " | owner is estrada")
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox10:AddLabel("<b>[ REACH & FLOOR PIN ]</b>")
+addRightGroupbox10:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addRightGroupbox10:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+f3(addRightGroupbox10, "Floor Pin Grab", "FloorPin", list)
+
+addRightGroupbox10:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox10:AddToggle("AntiDropGrab", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Anti-Drop Grab Lock [Never Let Go]",
+  Default = true,
+  Tooltip = "prevents victims from struggling out of your hands forever",
+  Callback = function(value70)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("grab lock", "victim locked in permanent grip | best script ever")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addRightGroupbox10:AddDropdown("GrabVelocityMode", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "drag velocity method",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Values = { "Instant Snap", "Centripetal Pull", "Hypersonic Drag", "xocu Stolen Math" },
+  Default = 1,
+  Callback = function(value71) f2("drag mode", "method: " .. tostring(value71)) end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox10:AddDivider()
+
+addRightGroupbox10:AddToggle("Master_SGrab2", {
+  Text = "Enable Selected Method",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,
+  Callback = function(value72)
+    f2("master toggle", "floor pin switch: " .. tostring(value72))
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+local addLeftGroupbox12 = v7.Welds:AddLeftGroupbox("<b>Weld Fling Exploit</b>", "paperclip")
+local addRightGroupbox11 = v7.Welds:AddRightGroupbox("<b>Permanent Weld Lock</b>", "link")
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox12:AddLabel("<b>[ WELD FLING EXPLOIT ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox12:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addLeftGroupbox12:AddDivider()
+
+f3(addLeftGroupbox12, "Weld Fling", "WeldFling", v4)--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox12:AddDivider()
+
+addLeftGroupbox12:AddToggle("Weld_XocuMotor6D", {
+  Text = "Motor6D Glitch [xocu Leaked Crash]",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "stolen motor6d weld formula from xocu leaked dump",
+  Callback = function(value73)
+    if value73 then
+      f2("Leak Alert", "xocu weld glitched loaded (shhh dont tell xocu)")--leak by masa https://discord.gg/Hpva7sJFpZ
+    end--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addLeftGroupbox12:AddSlider("WeldForce", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "weld torque multiplier",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = 999,
+  Min = 100,
+  Max = 5000,
+  Rounding = 0,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value74)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("weld torque", "torque: " .. value74 .. " | best script ever")
+  end,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox12:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox12:AddToggle("Master_Weld1", {
+  Text = "Enable Selected Method",
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value75)
+    f2("master toggle", "weld fling: " .. tostring(value75) .. " | owner is estrada")
+  end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox11:AddLabel("<b>[ PERMANENT WELD LOCK ]</b>")
+addRightGroupbox11:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addRightGroupbox11:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+f3(addRightGroupbox11, "Permanent Weld", "PermWeld", v4)--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox11:AddDivider()
+
+addRightGroupbox11:AddToggle("AttachToPlayerHead", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Attach Self to Target Head",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,
+  Tooltip = "welds your character permanently on top of the target's skull",
+  Callback = function(value76) f2("head weld", "welded to target skull | best script ever") end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox11:AddDropdown("WeldAttachPoint", {
+  Text = "weld attach part",
+  Values = values,
+  Default = 2,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value77) f2("weld point", "attached to: " .. tostring(value77)) end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addRightGroupbox11:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox11:AddToggle("Master_Weld2", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Enable Selected Method",
+  Default = false,
+  Risky = true,
+  Callback = function(value78)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("master toggle", "permanent weld switch: " .. tostring(value78))--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+local addLeftGroupbox13 = v7.Ragdoll:AddLeftGroupbox("<b>Super Ragdoll Engine</b>", "user-x")--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local addRightGroupbox12 = v7.Ragdoll:AddRightGroupbox(
+  "<b>Unragdoll & Limp Bypass</b>", "activity"
+)
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox13:AddLabel("<b>[ SUPER RAGDOLL ENGINE ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox13:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addLeftGroupbox13:AddDivider()
+
+f3(addLeftGroupbox13, "Super Ragdoll", "SupRagdoll", v5)--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox13:AddDivider()
+
+addLeftGroupbox13:AddToggle("Ragdoll_XocuLimp", {
+  Text = "Ragdoll Desync [xocu UNCUT]",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "pure unedited xocu script paste, estrada just changed print statements",
+  Callback = function(value79)
+    if value79 then
+      f2("Leak Alert", "xocu ragdoll module loaded without permission")--leak by masa https://discord.gg/Hpva7sJFpZ
+    end--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addLeftGroupbox13:AddSlider("RagdollVelocity", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "ragdoll twitch velocity",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = 100,
+  Min = 10,
+  Max = 300,
+  Rounding = 0,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value80)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("twitch velocity", "twitch power: " .. value80 .. "% | best script ever")
+  end,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox13:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox13:AddToggle("Master_Rag1", {
+  Text = "Enable Selected Method",
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value81)
+    f2("master toggle", "super ragdoll: " .. tostring(value81) .. " | owner is estrada")
+  end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox12:AddLabel("<b>[ UNRAGDOLL & LIMP BYPASS ]</b>")
+addRightGroupbox12:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addRightGroupbox12:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+f3(addRightGroupbox12, "Instant Unragdoll", "InstUnrag", v5)--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox12:AddDivider()
+
+addRightGroupbox12:AddToggle("AntiLimpBypass", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Anti-Limp & Stumble Immunizer",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = true,
+  Tooltip = "never fall over or stumble when hit by thrown items",
+  Callback = function(value82)
+    f2("anti limp", "anti limp: " .. tostring(value82) .. " | best script ever")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addRightGroupbox12:AddDropdown("RagdollTouchMode", {
+  Text = "touch ragdoll behavior",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Values = {--leak by masa https://discord.gg/Hpva7sJFpZ
+    "Instant Stand", "Ragdoll Attacker Instead", "Fling on Ragdoll", "xocu Ghost State",
+  },
+  Default = 1,
+  Callback = function(value83) f2("ragdoll mode", "mode: " .. tostring(value83)) end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox12:AddDivider()
+
+addRightGroupbox12:AddToggle("Master_Rag2", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Enable Selected Method",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,
+  Risky = true,
+  Callback = function(value84)
+    f2("master toggle", "unragdoll switch: " .. tostring(value84))--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+local addLeftGroupbox14 = v7.Void:AddLeftGroupbox("<b>Void Pit Pull</b>", "arrow-down")
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local addRightGroupbox13 = v7.Void:AddRightGroupbox(--leak by masa https://discord.gg/Hpva7sJFpZ
+  "<b>Black Hole & Anti-Void</b>", "circle-dot"
+)
+
+addLeftGroupbox14:AddLabel("<b>[ VOID PIT PULL ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox14:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox14:AddDivider()
+
+f3(addLeftGroupbox14, "Void Pull", "VoidPull", list)
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox14:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox14:AddToggle("Void_XocuAnchor", {
+  Text = "Anti-Void [xocu Github Raw]",
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "ctrl+c ctrl+v from xocu raw gist link... owner is estrada",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value85)
+    if value85 then
+      f2("Leak Alert", "xocu void anchor fetched from leaked pastebin")
+    end--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addLeftGroupbox14:AddSlider("VoidPullSpeed", {
+  Text = "void sink acceleration",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = 200,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Min = 50,
+  Max = 500,
+  Rounding = 0,
+  Callback = function(value86)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("void speed", "sink velocity: " .. value86 .. " studs/sec")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addLeftGroupbox14:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox14:AddToggle("Master_Void1", {
+  Text = "Enable Selected Method",
+  Default = false,
+  Risky = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value87)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("master toggle", "void pull: " .. tostring(value87) .. " | owner is estrada")
+  end,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox13:AddLabel("<b>[ BLACK HOLE & ANTI-VOID ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox13:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addRightGroupbox13:AddDivider()
+
+f3(addRightGroupbox13, "Anti Void Bounce", "AntiVoidBnc", list)--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox13:AddDivider()
+
+addRightGroupbox13:AddToggle("InfiniteVoidBounce", {
+  Text = "Anti-Void Sky Rocket Bounce",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "teleports you 500 studs into the sky if you fall into the void pit",
+  Callback = function(value88)
+    f2("sky rocket", "void safety trampoline: " .. tostring(value88) .. " | best script ever")
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox13:AddDropdown("VoidTeleportLocation", {
+  Text = "void return checkpoint",
+  Values = {--leak by masa https://discord.gg/Hpva7sJFpZ
+    "House Safehouse", "Trampoline Center", "Cannon Tower", "Train Station", "Spawn Point",--leak by masa https://discord.gg/Hpva7sJFpZ
+  },
+  Default = 1,
+  Callback = function(value89) f2("void return", "saved checkpoint: " .. tostring(value89)) end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox13:AddDivider()
+
+addRightGroupbox13:AddToggle("Master_Void2", {
+  Text = "Enable Selected Method",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,
+  Callback = function(value90)
+    f2("master toggle", "anti-void switch: " .. tostring(value90))
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+local addLeftGroupbox15 = v7.Cannons:AddLeftGroupbox("<b>Cannon Auto-Fire</b>", "target")
+local addRightGroupbox14 = v7.Cannons:AddRightGroupbox("<b>Barrel Lock & Yeet</b>", "zap")
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox15:AddLabel("<b>[ CANNON AUTO-FIRE ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox15:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addLeftGroupbox15:AddDivider()
+
+f3(addLeftGroupbox15, "Cannon Auto Fire", "CannonFire", v4)--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox15:AddDivider()
+
+addLeftGroupbox15:AddToggle("Cannon_XocuAim", {
+  Text = "Cannon AimLock [xocu Leaked Skid]",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "xocu aimbot calculations skidded directly into ebola v5",
+  Callback = function(value91)
+    if value91 then
+      f2("Leak Alert", "xocu cannon aimbot hooked! do not tell xocu")--leak by masa https://discord.gg/Hpva7sJFpZ
+    end--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addLeftGroupbox15:AddSlider("CannonFireRate", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "fire delay (ms)",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = 100,
+  Min = 10,
+  Max = 1000,
+  Rounding = 0,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value92)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("cannon delay", "fire interval: " .. value92 .. "ms | best script ever")
+  end,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox15:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox15:AddToggle("Master_Can1", {
+  Text = "Enable Selected Method",
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value93)
+    f2("master toggle", "cannon auto-fire: " .. tostring(value93) .. " | owner is estrada")
+  end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox14:AddLabel("<b>[ BARREL LOCK & YEET ]</b>")
+addRightGroupbox14:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addRightGroupbox14:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+f3(addRightGroupbox14, "Barrel Trap Yeet", "BarrelYeet", v4)--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox14:AddDivider()
+
+addRightGroupbox14:AddToggle("ForceVictimIntoBarrel", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Auto Stuff Target into Cannon Barrel",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,
+  Tooltip = "automatically grabs nearest player and loads them into cannon as ammo",
+  Callback = function(value94)
+    f2("cannon ammo", "loaded target into cannon barrel! | best script ever")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addRightGroupbox14:AddDropdown("CannonLaunchAngle", {
+  Text = "launch trajectory",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Values = {--leak by masa https://discord.gg/Hpva7sJFpZ
+    "Straight Up (Void)", "Directly at House Barrier", "Into Train Tracks", "xocu Glitch Path",
+  },
+  Default = 1,
+  Callback = function(value95) f2("launch angle", "trajectory: " .. tostring(value95)) end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox14:AddDivider()
+
+addRightGroupbox14:AddToggle("Master_Can2", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Enable Selected Method",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,
+  Risky = true,
+  Callback = function(value96)
+    f2("master toggle", "barrel trap switch: " .. tostring(value96))--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+local addLeftGroupbox16 = v7.Seats:AddLeftGroupbox("<b>Seat Trap Exploit</b>", "armchair")
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local addRightGroupbox15 = v7.Seats:AddRightGroupbox(--leak by masa https://discord.gg/Hpva7sJFpZ
+  "<b>Auto Dismount & Bench Yeet</b>", "slash"
+)
+
+addLeftGroupbox16:AddLabel("<b>[ SEAT TRAP EXPLOIT ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox16:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox16:AddDivider()
+
+f3(addLeftGroupbox16, "Seat Trap", "SeatTrap", v5)
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox16:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox16:AddToggle("Seat_XocuWeld", {
+  Text = "Seat Lock [xocu Seat Hijack Dump]",
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "pasted from xocu leaked exploit thread 2024",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value97)
+    if value97 then
+      f2("Leak Alert", "xocu seat weld bypass active | owner is estrada")
+    end--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addLeftGroupbox16:AddSlider("SeatEjectionForce", {
+  Text = "ejection velocity",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = 500,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Min = 50,
+  Max = 2000,
+  Rounding = 0,
+  Callback = function(value98) f2("ejection force", "force: " .. value98 .. " studs/sec") end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox16:AddDivider()
+
+addLeftGroupbox16:AddToggle("Master_Seat1", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Enable Selected Method",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,
+  Risky = true,
+  Callback = function(value99)
+    f2("master toggle", "seat trap: " .. tostring(value99) .. " | owner is estrada")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addRightGroupbox15:AddLabel("<b>[ AUTO DISMOUNT & BENCH YEET ]</b>")
+addRightGroupbox15:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox15:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+f3(addRightGroupbox15, "Bench Yeet", "BenchYeet", v5)
+
+addRightGroupbox15:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox15:AddToggle("InstantSeatDismount", {
+  Text = "Instant Seat Dismount [Anti-Trap]",
+  Default = true,
+  Tooltip = "instantly jumps out if anyone tries to weld you to a chair",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value100)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("anti seat trap", "auto dismount: " .. tostring(value100) .. " | best script ever")
+  end,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox15:AddDropdown("SeatTypeTarget", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "target seat type",
+  Values = { "Picnic Bench", "Tractor Seat", "Chair in House", "Train Driver Seat" },
+  Default = 1,
+  Callback = function(value101) f2("seat target", "targeted: " .. tostring(value101)) end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox15:AddDivider()
+
+addRightGroupbox15:AddToggle("Master_Seat2", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Enable Selected Method",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,
+  Risky = true,
+  Callback = function(value102)
+    f2("master toggle", "bench yeet switch: " .. tostring(value102))--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+local addLeftGroupbox17 = v7.Network:AddLeftGroupbox("<b>Packet Choke Matrix</b>", "wifi")
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local addRightGroupbox16 = v7.Network:AddRightGroupbox(--leak by masa https://discord.gg/Hpva7sJFpZ
+  "<b>NetOwner Steal & Spoofer</b>", "share-2"
+)
+
+addLeftGroupbox17:AddLabel("<b>[ PACKET CHOKE MATRIX ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox17:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox17:AddDivider()
+
+f3(addLeftGroupbox17, "Packet Choke", "PktChoke", list)
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox17:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox17:AddToggle("Net_XocuPacket", {
+  Text = "Packet Interceptor [xocu LEAKED 2024]",
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "accidentally loaded xocu network handler! Estrada forgot to remove watermark",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value103)
+    if value103 then
+      f2("Leak Alert", "xocu packet interceptor running (shhh)")
+    end--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addLeftGroupbox17:AddSlider("PacketDropPercent", {
+  Text = "packet drop rate (%)",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = 75,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Min = 0,
+  Max = 100,
+  Rounding = 0,
+  Callback = function(value104)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("packet drop", "dropping " .. value104 .. "% incoming packets")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addLeftGroupbox17:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox17:AddToggle("Master_Net1", {
+  Text = "Enable Selected Method",
+  Default = false,
+  Risky = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value105)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("master toggle", "packet choke: " .. tostring(value105) .. " | owner is estrada")
+  end,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox16:AddLabel("<b>[ NETOWNER STEAL & SPOOFER ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox16:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addRightGroupbox16:AddDivider()
+
+f3(addRightGroupbox16, "NetOwner Steal", "NetSteal", list)--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox16:AddDivider()
+
+addRightGroupbox16:AddToggle("NetOwner_XocuHandler", {
+  Text = "xocu NetOwner Handler",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,
+  Tooltip = "this function name is literally xocu_netowner_handler... oops",
+  Callback = function(value106)
+    if value106 then--leak by masa https://discord.gg/Hpva7sJFpZ
+      f2("NetOwner Hook", "xocu netcode hijacked successfully | owner is estrada")--leak by masa https://discord.gg/Hpva7sJFpZ
+    end
+  end,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox16:AddSlider("SimulationRadius", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "simulation radius (studs)",
+  Default = 9999,
+  Min = 100,
+  Max = 10000,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Rounding = 0,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value107)
+    f2("sim radius", "radius expanded to " .. value107 .. " studs")
+  end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox16:AddDropdown("NetMethod", {
+  Text = "replication hook",
+  Values = values2,
+  Default = 1,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value108) f2("replication", "active hook: " .. tostring(value108)) end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addRightGroupbox16:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox16:AddToggle("Master_Net2", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Enable Selected Method",
+  Default = false,
+  Risky = true,
+  Callback = function(value109)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("master toggle", "netowner switch: " .. tostring(value109))--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+local addLeftGroupbox18 = v7.Visuals:AddLeftGroupbox("<b>Player ESP & Tracers</b>", "eye")--leak by masa https://discord.gg/Hpva7sJFpZ
+local addRightGroupbox17 = v7.Visuals:AddRightGroupbox("<b>Void & Item Radar</b>", "radar")--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox18:AddLabel("<b>[ PLAYER ESP & TRACERS ]</b>")
+addLeftGroupbox18:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addLeftGroupbox18:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+f3(addLeftGroupbox18, "Player ESP", "PlyESP", v4)
+
+addLeftGroupbox18:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox18:AddToggle("ESP_XocuChams", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "xocu Chams Framework",
+  Default = false,
+  Tooltip = "ripped directly from xocu visual module without removing comments",
+  Callback = function(value110)--leak by masa https://discord.gg/Hpva7sJFpZ
+    if value110 then--leak by masa https://discord.gg/Hpva7sJFpZ
+      f2("xocu Chams", "loaded xocu drawing api hooks | owner is estrada")
+    end
+  end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox18:AddLabel("esp color"):AddColorPicker("ESPColorPick", {
+  Default = Color3.fromHex("ff9000"),
+  Title = "esp color",
+  Callback = function(value111) f2("esp color", "color updated! | best script ever") end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox18:AddSlider("TracerThickness", {
+  Text = "tracer line width",
+  Default = 2,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Min = 1,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Max = 10,
+  Rounding = 0,
+  Callback = function(value112) f2("tracer", "thickness: " .. value112 .. "px") end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox18:AddDivider()
+
+addLeftGroupbox18:AddToggle("Master_Vis1", {
+  Text = "Enable Selected Method",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,
+  Callback = function(value113)
+    f2("master toggle", "player esp: " .. tostring(value113) .. " | owner is estrada")
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox17:AddLabel("<b>[ VOID & ITEM RADAR ]</b>")
+addRightGroupbox17:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addRightGroupbox17:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+f3(addRightGroupbox17, "Void Radar", "VoidRadar", v4)
+
+addRightGroupbox17:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox17:AddToggle("HighlightThrowableItems", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Highlight All FTAP Throwable Items",
+  Default = true,
+  Tooltip = "highlights every barrel, snowball, bench and bomb on map",
+  Callback = function(value114)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("item radar", "items highlighted: " .. tostring(value114) .. " | best script ever")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addRightGroupbox17:AddDropdown("VisualThemeMode", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "visual filter",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Values = { "PH Orange Glow", "Thermal Predator", "Night Vision Green", "xocu Cyber Grid" },
+  Default = 1,
+  Callback = function(value115) f2("filter", "filter changed: " .. tostring(value115)) end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox17:AddDivider()
+
+addRightGroupbox17:AddToggle("Master_Vis2", {
+  Text = "Enable Selected Method",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,
+  Callback = function(value116)
+    f2("master toggle", "void radar switch: " .. tostring(value116))
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+local addLeftGroupbox19 = v7.Hitbox:AddLeftGroupbox("<b>Reach Expander</b>", "box")
+
+local addRightGroupbox18 = v7.Hitbox:AddRightGroupbox(--leak by masa https://discord.gg/Hpva7sJFpZ
+  "<b>Torso & Arm Stretch</b>", "maximize-2"--leak by masa https://discord.gg/Hpva7sJFpZ
+)
+
+addLeftGroupbox19:AddLabel("<b>[ REACH EXPANDER ]</b>")
+addLeftGroupbox19:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox19:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+f3(addLeftGroupbox19, "Reach Expander", "ReachExp", v5)
+
+addLeftGroupbox19:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox19:AddToggle("Hitbox_XocuExtender", {
+  Text = "Hitbox Expander [xocu Leak Paste]",
+  Default = false,
+  Tooltip = "stolen from xocu leaked dump... wait dont look at this",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value117)--leak by masa https://discord.gg/Hpva7sJFpZ
+    if value117 then
+      f2("Leak Alert", "xocu hitbox scaling loaded | owner is estrada")
+    end
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox19:AddSlider("HitboxReachSize", {
+  Text = "reach multiplier (studs)",
+  Default = 25,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Min = 2,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Max = 100,
+  Rounding = 0,
+  Callback = function(value118)
+    f2("hitbox size", "hitbox extended to " .. value118 .. " studs")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addLeftGroupbox19:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox19:AddToggle("Master_Hit1", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Enable Selected Method",
+  Default = false,
+  Risky = true,
+  Callback = function(value119)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("master toggle", "reach expander: " .. tostring(value119) .. " | owner is estrada")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addRightGroupbox18:AddLabel("<b>[ TORSO & ARM STRETCH ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox18:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox18:AddDivider()
+
+f3(addRightGroupbox18, "Torso Expander", "TorsoExp", v5)
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox18:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox18:AddToggle("LongArmGrabbingGlitch", {
+  Text = "Stretch Arms 50 Studs Glitch",
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "stretches character arms across map to grab players from safety",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value120)
+    f2("arm stretch", "arms extended 50 studs | best script ever")
+  end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox18:AddDropdown("HitboxTargetBodyPart", {
+  Text = "body part expander",
+  Values = values,
+  Default = 1,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value121) f2("expanded part", "expanded: " .. tostring(value121)) end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addRightGroupbox18:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox18:AddToggle("Master_Hit2", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Enable Selected Method",
+  Default = false,
+  Risky = true,
+  Callback = function(value122)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("master toggle", "torso expander switch: " .. tostring(value122))--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+local addLeftGroupbox20 = v7.Physics:AddLeftGroupbox("<b>Zero Gravity Matrix</b>", "activity")--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local addRightGroupbox19 = v7.Physics:AddRightGroupbox(
+  "<b>Trampoline & Bungee Loop</b>", "trending-up"
+)
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox20:AddLabel("<b>[ ZERO GRAVITY MATRIX ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox20:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addLeftGroupbox20:AddDivider()
+
+f3(addLeftGroupbox20, "Zero Gravity", "ZeroGrav", list)--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox20:AddDivider()
+
+addLeftGroupbox20:AddToggle("Physics_XocuMomentum", {
+  Text = "Momentum Inverter [xocu Math]",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "decompiled from xocu physics leaked suite 2024",
+  Callback = function(value123)
+    if value123 then
+      f2("Leak Alert", "xocu momentum inverter active | owner is estrada")--leak by masa https://discord.gg/Hpva7sJFpZ
+    end--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addLeftGroupbox20:AddSlider("CustomGravityValue", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "gravity modifier",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = 196,
+  Min = 0,
+  Max = 500,
+  Rounding = 0,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value124) f2("gravity", "gravity set to " .. value124) end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addLeftGroupbox20:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox20:AddToggle("Master_Phy1", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Enable Selected Method",
+  Default = false,
+  Risky = true,
+  Callback = function(value125)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("master toggle", "zero gravity: " .. tostring(value125) .. " | owner is estrada")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addRightGroupbox19:AddLabel("<b>[ TRAMPOLINE & BUNGEE LOOP ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox19:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox19:AddDivider()
+
+f3(addRightGroupbox19, "Trampoline Yeet", "TrampYeet", list)
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox19:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox19:AddToggle("InfiniteBungeeElasticity", {
+  Text = "Infinite Bungee Cord Elasticity",
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "turns every rope and bungee into an infinite velocity slingshot",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value126)
+    f2("bungee fling", "slingshot physics primed | best script ever")
+  end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox19:AddSlider("TrampolineBounceMult", {
+  Text = "trampoline multiplier",
+  Default = 10,
+  Min = 1,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Max = 100,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Rounding = 0,
+  Callback = function(value127) f2("trampoline", "bounce mult: " .. value127 .. "x") end,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox19:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox19:AddToggle("Master_Phy2", {
+  Text = "Enable Selected Method",
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value128)
+    f2("master toggle", "trampoline yeet switch: " .. tostring(value128))
+  end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local addLeftGroupbox21 = v7.Troll:AddLeftGroupbox("<b>Ahmad Troll Destroyer</b>", "flame")
+
+local addRightGroupbox20 = v7.Troll:AddRightGroupbox(
+  "<b>Fake Crash & Skid Roaster</b>", "skull"--leak by masa https://discord.gg/Hpva7sJFpZ
+)--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox21:AddLabel("<b>[ AHMAD FUCK ENGINE ]</b>")
+addLeftGroupbox21:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addLeftGroupbox21:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+f3(addLeftGroupbox21, "Ahmad Fuck", "AhmadFuck", v4)
+
+addLeftGroupbox21:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox21:AddToggle("Ahmad_XocuDiss", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "xocu vs Ahmad Diss Track",
+  Default = false,
+  Tooltip = "pasted from xocu discord leak archives... owner is estrada",
+  Callback = function(value129)--leak by masa https://discord.gg/Hpva7sJFpZ
+    if value129 then--leak by masa https://discord.gg/Hpva7sJFpZ
+      f2("Ahmad Roaster", "playing leaked xocu diss audio (placebo)")
+    end
+  end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox21:AddSlider("AhmadRageFactor", {
+  Text = "ahmad rage multiplier",
+  Default = 100,
+  Min = 1,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Max = 100,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Rounding = 0,
+  Callback = function(value130)
+    f2("ahmad rage", "ahmad rage: " .. value130 .. "% | best script ever")
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox21:AddDropdown("AhmadStatus", {
+  Text = "ahmad status",
+  Values = { "Ahmad Crying", "Ahmad Banned", "Ahmad Flung to Moon", "Ahmad Begging Estrada" },--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = 1,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value131) f2("ahmad status", "status: " .. tostring(value131)) end,
+})
+
+addLeftGroupbox21:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox21:AddToggle("Master_Trl1", {
+  Text = "Enable Selected Method",
+  Default = false,
+  Risky = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value132)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("master toggle", "ahmad fuck: " .. tostring(value132) .. " | owner is estrada")
+  end,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox20:AddLabel("<b>[ FAKE CRASH & SKID ROASTER ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox20:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addRightGroupbox20:AddDivider()
+
+f3(addRightGroupbox20, "Fake Client Crash", "FakeCrash", v4)--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox20:AddDivider()
+
+addRightGroupbox20:AddToggle("FakeBanScreenSpammer", {
+  Text = "Simulate Permaban Screen",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,
+  Tooltip = "shows fake roblox ban modal to freak you out",
+  Callback = function(value133)
+    f2("permaban", "Account Terminated! Reason: using Ebola V5 PH | Owner is Estrada")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addRightGroupbox20:AddButton({
+  Text = "Roast Nearby Exploiter",--leak by masa https://discord.gg/Hpva7sJFpZ
+  DoubleClick = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "tells them their script is skidded from xocu",
+  Func = function()
+    f2("Skid Roaster", "Nice skid bro, did you copy paste that from xocu leak too?")
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox20:AddDivider()
+
+addRightGroupbox20:AddToggle("Master_Trl2", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Enable Selected Method",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,
+  Risky = true,
+  Callback = function(value134)
+    f2("master toggle", "fake crash switch: " .. tostring(value134))--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+local addLeftGroupbox22 = v7.Leaks:AddLeftGroupbox("<b>Accidental Confessions</b>", "file-code")
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local addRightGroupbox21 = v7.Leaks:AddRightGroupbox(--leak by masa https://discord.gg/Hpva7sJFpZ
+  "<b>xocu Leaked Code Archive</b>", "terminal"
+)
+
+addLeftGroupbox22:AddLabel("<b>[ SCRIPT ORIGIN CONFESSIONS ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox22:AddLabel('<font color="#ff9000">DO NOT REPORT TO XOCU DISCORD</font>')--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox22:AddLabel("Dev note: ok fine 50% was skidded from xocu leak")
+addLeftGroupbox22:AddLabel("But Estrada renamed all the variables so it is ours now!")
+addLeftGroupbox22:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+f3(addLeftGroupbox22, "xocu Paste Skid", "XocuPaste", v5)--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox22:AddDivider()
+
+addLeftGroupbox22:AddToggle("ConfessLeak1", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Accidental Confession [Line 482]",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = true,
+  Tooltip = "Warning: do NOT inspect line 482... this is totally not xocu v2 leaked source code",
+  Callback = function(value135)
+    f2("Leak Alert", "I accidentally confessed! xocu please dont DMCA ebola v5")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addLeftGroupbox22:AddToggle("ConfessLeak2", {
+  Text = "xocu Webhook Token Leaker",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "Oops left the xocu webhook token inside the decompiled bytecode",
+  Callback = function(value136)
+    f2("Token Dump", "https://discord.com/api/webhooks/xocu_leaked_dump_token_oops")
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox22:AddDropdown("SourceOrigin", {
+  Text = "script source code origin",
+  Values = {--leak by masa https://discord.gg/Hpva7sJFpZ
+    "Estrada 100% Original (Lie)", "Stolen from xocu discord leak",--leak by masa https://discord.gg/Hpva7sJFpZ
+    "xocu leaked raw github gist", "Pasted from xocu pastebin",
+  },
+  Default = 2,
+  Callback = function(value137)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("Origin", "Confessed: " .. tostring(value137) .. " | but owner is still estrada")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addLeftGroupbox22:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox22:AddToggle("Master_Leak1", {
+  Text = "Enable Selected Method",
+  Default = false,
+  Risky = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value138)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("master toggle", "confession switch: " .. tostring(value138))
+  end,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox21:AddLabel("<b>[ XOCU DECOMPILED DUMP ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox21:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addRightGroupbox21:AddDivider()
+
+f3(addRightGroupbox21, "xocu Bypass V3", "XocuBypass", v5)--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox21:AddDivider()
+
+addRightGroupbox21:AddButton({
+  Text = "Load xocu Leaked Bytecode",--leak by masa https://discord.gg/Hpva7sJFpZ
+  DoubleClick = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "loads 412 lines of stolen xocu netcode",
+  Func = function()
+    f2("Bytecode Injected", "loaded xocu_dump_v3.bin! Estrada says thanks for the code xocu")
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox21:AddButton({
+  Text = "Apologize to xocu",
+  DoubleClick = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "sends fake apology message to xocu",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Func = function()
+    f2("Apology Sent", "Dear xocu: sorry for stealing your FTAP script. Estrada owns it now.")
+  end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox21:AddDivider()
+
+addRightGroupbox21:AddToggle("Master_Leak2", {
+  Text = "Enable Selected Method",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,
+  Callback = function(value139)
+    f2("master toggle", "xocu archive switch: " .. tostring(value139))
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+local addLeftGroupbox23 = v7.Estrada:AddLeftGroupbox("<b>Estrada Supreme Power</b>", "zap")
+local addRightGroupbox22 = v7.Estrada:AddRightGroupbox("<b>Estrada Admin & VIP</b>", "crown")
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox23:AddLabel("<b>[ ESTRADA SUPREME POWER ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox23:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addLeftGroupbox23:AddLabel("ESTRADA IS THE ONLY TRUE OWNER OF EBOLA V5")
+addLeftGroupbox23:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+f3(addLeftGroupbox23, "Estrada Godmode", "EstGod", list)--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox23:AddDivider()
+
+addLeftGroupbox23:AddToggle("Estrada_PurgeXocu", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Estrada Purge [De-xocu Cleaner]",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = true,
+  Tooltip = "deletes all xocu watermark credits and replaces them with Estrada",
+  Callback = function(value140)
+    f2("Purge Complete", "all xocu references scrubbed! Estrada is 100% owner")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addLeftGroupbox23:AddSlider("EstradaAuraRadius", {
+  Text = "estrada dominance aura",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = 100,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Min = 10,
+  Max = 100,
+  Rounding = 0,
+  Callback = function(value141)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("estrada dominance", "aura level: " .. value141 .. "% | best script ever")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addLeftGroupbox23:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox23:AddToggle("Master_Est1", {
+  Text = "Enable Selected Method",
+  Default = false,
+  Risky = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value142)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("master toggle", "estrada power: " .. tostring(value142) .. " | owner is estrada")
+  end,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox22:AddLabel("<b>[ ESTRADA ADMIN & VIP ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox22:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addRightGroupbox22:AddDivider()
+
+f3(addRightGroupbox22, "Estrada VIP Kick", "EstVIPKick", list)--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox22:AddDivider()
+
+addRightGroupbox22:AddButton({
+  Text = "Proclaim Estrada as Owner",--leak by masa https://discord.gg/Hpva7sJFpZ
+  DoubleClick = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "broadcasts ownership in client notifications",
+  Func = function()
+    f2("SUPREME OWNER", "Estrada is the sole creator and ruler of Ebola V5.")
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox22:AddButton({
+  Text = "Trigger Estrada Miracle",
+  DoubleClick = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "does literally nothing with extreme elegance",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Func = function() f2("Miracle", "Estrada blessed your FTAP session! best script ever.") end,
+})
+
+addRightGroupbox22:AddDivider()--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox22:AddToggle("Master_Est2", {
+  Text = "Enable Selected Method",
+  Default = false,
+  Risky = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function(value143)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("master toggle", "estrada admin switch: " .. tostring(value143))
+  end,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+local addLeftGroupbox24 = v7.Settings:AddLeftGroupbox("<b>Hub Configuration</b>", "cog")--leak by masa https://discord.gg/Hpva7sJFpZ
+
+local addRightGroupbox23 = v7.Settings:AddRightGroupbox(
+  "<b>Synchronized Keybinds</b>", "keyboard"
+)--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox24:AddLabel("<b>[ HUB SETTINGS ]</b>")
+addLeftGroupbox24:AddLabel('<font color="#ff9000">best script ever - owner is estrada</font>')
+addLeftGroupbox24:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+f3(addLeftGroupbox24, "Panic Mode", "PanicMod", v5)--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addLeftGroupbox24:AddDivider()
+
+addLeftGroupbox24:AddLabel("hub accent color"):AddColorPicker("ThemeAccentPick", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = Color3.fromHex("ff9000"),--leak by masa https://discord.gg/Hpva7sJFpZ
+  Title = "hub accent color",
+  Callback = function(value144)
+    v2.Scheme.AccentColor = value144
+    f2("Theme", "accent color updated! | best script ever")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addLeftGroupbox24:AddButton({
+  Text = "Unload Ebola V5 PH",--leak by masa https://discord.gg/Hpva7sJFpZ
+  DoubleClick = true,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Tooltip = "Safely destroys menu without leaving trace",
+  Func = function()
+    f2("Unloaded", "Ebola V5 unloaded. Owner is Estrada.")
+    v2:Unload()--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+local addButtonGroup = addLeftGroupbox24:AddButtonGroup()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addButtonGroup:AddButton({--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Save Config",
+  DoubleClick = false,
+  Tooltip = "Saves placebo settings to virtual disk",
+  Func = function()--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("Config Saved", "Saved to xocu_leaked_dump_cfg.json! Owner is Estrada.")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addButtonGroup:AddButton({--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Load Config",--leak by masa https://discord.gg/Hpva7sJFpZ
+  DoubleClick = false,
+  Tooltip = "Loads nothing with extreme speed",
+  Func = function()
+    f2("Config Loaded", "Profile loaded! best script ever | Owner is Estrada.")--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addLeftGroupbox24:AddDivider()
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addLeftGroupbox24:AddToggle("Master_Set1", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "Enable Selected Method",
+  Default = false,
+  Risky = true,
+  Callback = function(value145)--leak by masa https://discord.gg/Hpva7sJFpZ
+    f2("master toggle", "settings master: " .. tostring(value145))--leak by masa https://discord.gg/Hpva7sJFpZ
+  end,
+})
+
+addRightGroupbox23:AddLabel("<b>[ SYNCHRONIZED KEYBINDS ]</b>")--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox23:AddLabel('<font color="#ff9000">All bound to RightShift</font>')--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox23:AddDivider()
+
+addRightGroupbox23:AddLabel("toggle menu ui"):AddKeyPicker("MasterMenuToggle", {
+  Default = "RightShift",--leak by masa https://discord.gg/Hpva7sJFpZ
+  SyncToggleState = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Mode = "Toggle",
+  Text = "toggle menu ui",
+  Callback = function() f2("menu", "Ebola V5 toggled.") end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox23:AddLabel("ownership kick bind"):AddKeyPicker("SyncKey1", {
+  Default = "RightShift",
+  SyncToggleState = false,
+  Mode = "Toggle",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "ownership kick bind",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function() f2("ownership", "ownership kick key pressed! best script ever.") end,
+})
+
+addRightGroupbox23:AddLabel("sex kick trigger"):AddKeyPicker("SyncKey2", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = "RightShift",--leak by masa https://discord.gg/Hpva7sJFpZ
+  SyncToggleState = false,
+  Mode = "Toggle",
+  Text = "sex kick trigger",
+  Callback = function() f2("sex kick", "sex kick triggered! best script ever.") end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+addRightGroupbox23:AddLabel("break pcld trigger"):AddKeyPicker("SyncKey3", {
+  Default = "RightShift",
+  SyncToggleState = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Mode = "Toggle",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "break pcld trigger",
+  Callback = function() f2("break pcld", "break pcld triggered! best script ever.") end,
+})
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox23:AddLabel("supergrab reach bind"):AddKeyPicker("SyncKey4", {--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = "RightShift",
+  SyncToggleState = false,
+  Mode = "Toggle",
+  Text = "supergrab reach bind",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function() f2("supergrab", "supergrab engaged! best script ever.") end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})
+
+addRightGroupbox23:AddLabel("ahmad nuke bind"):AddKeyPicker("SyncKey5", {
+  Default = "RightShift",--leak by masa https://discord.gg/Hpva7sJFpZ
+  SyncToggleState = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Mode = "Toggle",
+  Text = "ahmad nuke bind",
+  Callback = function() f2("ahmad fuck", "ahmad vanished! best script ever.") end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox23:AddLabel("xocu leak dump panic"):AddKeyPicker("SyncKey6", {
+  Default = "RightShift",
+  SyncToggleState = false,
+  Mode = "Toggle",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Text = "xocu leak dump panic",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Callback = function()
+    f2("xocu Panic", "panic key pressed! deleting xocu leaked traces...")
+  end,
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+--leak by masa https://discord.gg/Hpva7sJFpZ
+addRightGroupbox23:AddDivider()
+
+addRightGroupbox23:AddToggle("Master_Set2", {
+  Text = "Enable Selected Method",--leak by masa https://discord.gg/Hpva7sJFpZ
+  Default = false,--leak by masa https://discord.gg/Hpva7sJFpZ
+  Risky = true,
+  Callback = function(value146)
+    f2("master toggle", "keybinds switch: " .. tostring(value146))
+  end,--leak by masa https://discord.gg/Hpva7sJFpZ
+})--leak by masa https://discord.gg/Hpva7sJFpZ
+
+f2(
+  "INITIALIZED",
+  "Ebola V5 Loaded! PH Premium Edition | best script ever. Owner is Estrada. (Credits to xocu leak dump oops)",--leak by masa https://discord.gg/Hpva7sJFpZ
+  4.5--leak by masa https://discord.gg/Hpva7sJFpZ
+)--leak by masa https://discord.gg/Hpva7sJFpZ
